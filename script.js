@@ -24,3 +24,17 @@ for (var i = 0; i < miNombre.length; i++) {
         console.log("He trobat la CONSONANTE: " + miNombre[i])
     }
 }
+
+/*FASE 3: Emmagatzemar en un objecte o una estructura Map (a la teva elecció) les lletres de l'array y el nombre de vegades que apareixen.*/
+
+var miNombre = ['C', 'R', 'I', 'S', 'T', 'I', 'N', 'A']
+var mapNombre = new Map();
+for (var i = 0; i < miNombre.length; i++) {
+    var letra = miNombre[i];
+    if (!mapNombre[letra]) {
+        mapNombre[letra] = 1;
+    } else {
+        mapNombre[letra]++;
+    }
+}
+console.log(mapNombre);
